@@ -1,10 +1,7 @@
 const findBestEmployee = function (employees) {
-  const arrValues = Object.keys(employees);
-  let bestEmplNum = employees[arrValues[0]];
-  let bestEmpl = arrValues[0];
-  //console.log(bestEmpl);
-  for (const value of arrValues) {
-    //console.log(employees[value]);
+  let bestEmpl;
+  let bestEmplNum = 0;
+  for (const value in employees) {
     if (bestEmplNum < employees[value]) {
       bestEmplNum = employees[value];
       bestEmpl = value;

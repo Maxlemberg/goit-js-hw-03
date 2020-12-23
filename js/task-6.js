@@ -8,12 +8,12 @@ const products = [
 const calculateTotalPrice = function (allProdcuts, productName) {
   let totalPrice;
   for (const objArr of allProdcuts) {
-    let arrValue = Object.values(objArr);
-    for (const name of arrValue) {
-      if (name === productName) {
-        totalPrice = objArr.price * objArr.quantity;
-        return totalPrice;
-      }
+    //let arrValue = Object.values(objArr);
+    //for (const name of arrValue) {
+    if (objArr.name === productName) {
+      totalPrice = objArr.price * objArr.quantity;
+      return totalPrice;
+      //}
     }
   }
 };
